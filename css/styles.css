@@ -1,7 +1,9 @@
-body, html {
+body,
+html {
     height: 100%;
     display: flex;
-    flex-direction: column; /* Cambia a columna para mejor manejo de elementos verticales */
+    flex-direction: column;
+    /* Cambia a columna para mejor manejo de elementos verticales */
     align-items: center;
     overflow: hidden;
     margin: 0;
@@ -17,22 +19,27 @@ body, html {
 }
 
 header {
-    position: relative;  /* Asegura que el header tenga un posicionamiento para z-index */
-    z-index: 10;         /* Un z-index más alto que las tarjetas */
+    position: relative;
+    /* Asegura que el header tenga un posicionamiento para z-index */
+    z-index: 10;
+    /* Un z-index más alto que las tarjetas */
     text-align: center;
     width: 100%;
-    padding: 20px 0;     /* Añade padding para dar espacio */
-    background: #fff;    /* Fondo para garantizar que el texto se vea sobre las tarjetas */
-    font-family: 'Quicksand', sans-serif;
-    
+    padding: 20px 0;
+    /* Añade padding para dar espacio */
+    background: #fff;
+    /* Fondo para garantizar que el texto se vea sobre las tarjetas */
 }
 
 .swiper-container {
     width: 100%;
-    height: 80vh; /* Ajusta según la necesidad */
+    height: 80vh;
+    /* Ajusta según la necesidad */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 .swiper-wrapper {
@@ -43,14 +50,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;  /* Cambia a 'auto' para evitar forzar un ancho específico */
-    flex-shrink: 0;  /* Evita que la diapositiva se encoja */
+    width: auto;
+    /* Cambia a 'auto' para evitar forzar un ancho específico */
+    flex-shrink: 0;
+    /* Evita que la diapositiva se encoja */
 }
 
 .card {
     height: 90vh;
-    width: 90%; /* Ajusta este porcentaje según necesites más estrecho */
-    max-width: 500px; /* Reduce el max-width si es necesario */
+    width: 90%;
+    /* Ajusta este porcentaje según necesites más estrecho */
+    max-width: 500px;
+    /* Reduce el max-width si es necesario */
     background-color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -58,12 +69,14 @@ header {
     flex-direction: column;
     overflow: hidden;
     padding: 20px;
-    margin: 0 auto; /* Añade auto para asegurar el centrado horizontal */
+    margin: 0 auto;
+    /* Añade auto para asegurar el centrado horizontal */
 }
 
 .parking-image {
     width: 100%;
-    height: 200px; /* Altura fija para las imágenes */
+    height: 200px;
+    /* Altura fija para las imágenes */
     background-size: cover;
     background-position: center;
     border-top-left-radius: 8px;
@@ -84,7 +97,9 @@ header {
     /* Alinea verticalmente los elementos */
 }
 
-.card-title, .card-subtitle, .card-description {
+.card-title,
+.card-subtitle,
+.card-description {
     text-align: center;
     margin: 10px;
 }
@@ -108,10 +123,13 @@ header {
 }
 
 .swiper-pagination {
-    bottom: 30%; /* Ajusta la posición de la paginación si es necesario */
+    bottom: 30%;
+    /* Ajusta la posición de la paginación si es necesario */
 }
 
-.icon-diamond, .icon-walking, .icon-car {
+.icon-diamond,
+.icon-walking,
+.icon-car {
     color: rgb(5, 128, 152);
 }
 
