@@ -1,167 +1,112 @@
-body,
-html {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    /* Cambia a columna para mejor manejo de elementos verticales */
-    align-items: center;
-    overflow: hidden;
+:root {
+    --turquoise: #30d5c8; /* Azul Turquesa */
+    --sand: #f4f1ec; /* Arena Blanca */
+    --sun-yellow: #f9d71c; /* Amarillo Sol */
+    --palm-green: #00a86b; /* Verde Palma */
+    --coral: #ff7e79; /* Coral */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Quicksand', sans-serif;
-    background-color: white;
+    background-color: var(--sand);
+    color: #333; /* Texto oscuro para mejor lectura */
 }
 
-header {
+h1 {
+    color: var(--turquoise);
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 0.9rem;
+    color: gray;
+    text-align: left;
+    margin: 0 0 0px;
+}
+
+
+ol {
+	list-style: none;
+	counter-reset: list;
+	padding: 0 1rem;
+}
+
+li {
+    --l: 62%;
+    --l2: 88%;
+    --h: calc((var(--i) - 1) * (180 / var(--length)));
+    --c1: hsl(var(--h), 71%, var(--l));
+    --c2: hsl(var(--h), 71%, var(--l2));
+
     position: relative;
-    /* Asegura que el header tenga un posicionamiento para z-index */
-    z-index: 10;
-    /* Un z-index más alto que las tarjetas */
-    text-align: center;
-    width: 100%;
-    padding: 20px 0;
-    /* Añade padding para dar espacio */
-    background: #fff;
-    /* Fondo para garantizar que el texto se vea sobre las tarjetas */
-}
-
-.swiper-container {
-    width: 100%;
-    height: 80vh;
-    /* Ajusta según la necesidad */
-    display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
-}
-
-.swiper-wrapper {
-    width: 100%;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    /* Cambia a 'auto' para evitar forzar un ancho específico */
-    flex-shrink: 0;
-    /* Evita que la diapositiva se encoja */
-}
-
-.card {
-    height: 90vh;
-    width: 90%;
-    /* Ajusta este porcentaje según necesites más estrecho */
-    max-width: 500px;
-    /* Reduce el max-width si es necesario */
-    background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+    counter-increment: list;
+    max-width: 45rem;
+    margin: 0.5rem auto;
+    padding: 1rem 1rem 1rem;
+    border-radius: 0.25rem;
     overflow: hidden;
-    padding: 20px;
-    margin: 0 auto;
-    /* Añade auto para asegurar el centrado horizontal */
+    background-color: white;
+    border: 1px solid #ccc;
+	border-color: var(--turquoise); /* Borde de los elementos de la lista */
+	
+
 }
 
-.parking-image {
-    width: 100%;
-    height: 200px;
-    /* Altura fija para las imágenes */
-    background-size: cover;
-    background-position: center;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+
+li::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.card-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+h3 {
+	display: flex;
+	align-items: baseline;
+	margin: 0 0 1rem;
+	color: rgb(70 70 70);
 }
 
-.subtitle-wrapper {
-    display: flex;
-    align-items: center;
-    /* Alinea verticalmente los elementos */
+h3::before {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	margin-right: 1rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	content: counter(list);
+	padding: 0.75rem;
+	border-radius: 50%;
+	background-color: var(--c1);
+	color: white;
 }
 
-.card-title,
-.card-subtitle,
-.card-description {
+#mainParagraph {
+    font-size: 1.2rem;
+    color: var(--coral);
     text-align: center;
-    margin: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
 }
 
-.card-title {
-    font-size: 30px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.card-subtitle {
-    font-size: 20px;
+a, button {
+    background-color: var(--turquoise);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
     font-weight: bold;
-    color: #333;
-}
-
-.card-description {
-    font-size: 18px;
-    color: #666;
-    margin: 00px;
-}
-
-.swiper-pagination {
-    bottom: 30%;
-    /* Ajusta la posición de la paginación si es necesario */
-}
-
-.icon-diamond,
-.icon-walking,
-.icon-car {
-    color: rgb(5, 128, 152);
-}
-
-.info-text {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 15px;
-}
-
-.info-text i {
-    margin-left: 5px;
-}
-
-.info-wrapper {
-    display: flex;
-    justify-content: space-between;
-    /* Distribuye los elementos de manera uniforme */
-    /* Espacio entre los elementos */
-}
-
-.info-text {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 15px;
-}
-
-.info-text i {
-    margin-left: 5px;
+    transition: background-color 0.3s;
 }
