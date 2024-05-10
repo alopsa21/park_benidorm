@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         updateParkingList(data);
     } catch (error) {
         console.error('Error al cargar la lista de parkings:', error);
-        alert('Error fetching the parkings: ' + error.message);
     }
 });
 
