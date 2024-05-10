@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     } catch (error) {
         console.error('Error al cargar la lista de parkings:', error);
         alert('Error fetching the parkings: ' + error.message);
-        displayErrorMessage(error.message);
     }
 });
 
@@ -34,9 +33,4 @@ function updateParkingList(parkings) {
     });
 
     parkingList.appendChild(olElement);
-}
-
-function displayErrorMessage(message) {
-    const parkingList = document.getElementById('parkingList');
-    parkingList.innerHTML = `<p style="color: red;">${message}</p>`;
 }
